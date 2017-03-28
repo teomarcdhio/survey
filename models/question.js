@@ -1,10 +1,12 @@
 var mongoose     = require('mongoose');
 var Schema       = mongoose.Schema;
 
-var FormSchema   = new Schema({
+var QuestionSchema   = new Schema({
     name: String,
-    description: String,
+    question_type: String,
+    form_id: String,
     updated_at: { type: Date, default: Date.now},
+
 });
 
-module.exports = mongoose.model('Form', FormSchema);
+module.exports = mongoose.model('Question', QuestionSchema);
